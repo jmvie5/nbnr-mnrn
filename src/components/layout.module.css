@@ -1,0 +1,50 @@
+body { 
+    margin: 0; 
+}
+
+.background {
+    background-color: navy;
+    margin: none;
+}
+
+.header{
+    margin: auto;
+    border-bottom-style: dotted;
+    border-bottom: 8px;
+    border-color: black;
+    background-color: navy ;
+    justify-content: center;
+    justify-items: space-between;
+    align-items: center;
+    padding: 1.45rem 1.0875rem;
+    font-family: sans-serif;
+    display: flex;
+}
+
+.container {
+    margin: 0 auto;
+    font-family: sans-serif;
+    max-width: 960;
+    padding: 1.45rem 1.0875rem;
+    display: flex;
+}
+
+.nav-links{
+    display: flex;
+    flex: 1;
+}
+
+.nav-link-item {
+    list-style-type: none;
+    padding-right: 1rem;
+}
+
+.nav-link-text {
+    color: white;
+}
+
+.site-title {
+    font-size: 2rem;
+    color:white;
+    font-weight: 700;
+}
