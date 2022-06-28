@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "nbrn",
+    title: "NBNR-MNRN",
     siteUrl: `https://www.yourdomain.tld`,
     menuLinks: [
       {
@@ -22,7 +22,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `gallery`,
-        path: `${__dirname}/src/gallery`,
+        path: `${__dirname}/gallery`,
       }
     },
     "gatsby-plugin-image",
