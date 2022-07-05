@@ -4,10 +4,10 @@ import Layout from "../components/Layout"
 const IndexPage = () => {
   return (
 
-      <Layout pageTitle="Home">
-        <p>test</p>
-      </Layout>
-    
+    <div>
+          <Layout pageTitle="Home"></Layout>
+    </div>
+      
   )
 }
 

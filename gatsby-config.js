@@ -30,5 +30,6 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-sharp",
+    'gatsby-plugin-postcss',
   ],
 }
