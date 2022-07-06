@@ -4,16 +4,20 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`,
     menuLinks: [
       {
-        name: "About",
-        link: "/about",
-      },
-      {
         name: "Home",
         link: "/",
       },
       {
+        name: "About",
+        link: "/about",
+      },
+      {
         name: "Gallery",
         link: "/gallery"
+      },
+      {
+        name: "Concerts",
+        link: "/concerts"
       }
     ],
   },
