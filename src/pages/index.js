@@ -1,14 +1,18 @@
 import * as React from "react"
-import Layout from "../components/Layout"
+import LayoutPhoto from "../components/LayoutPhoto"
+
 
 const IndexPage = () => {
-  return (
+
+    return (
 
     <div>
-          <Layout pageTitle="Home"></Layout>
+        <LayoutPhoto pageTitle="Home">
+
+        </LayoutPhoto>
     </div>
-      
-  )
+        
+    )
 }
 
 export default IndexPage

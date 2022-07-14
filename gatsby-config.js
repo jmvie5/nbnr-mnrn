@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "NBNR-MNRN",
+    title: "National Band of the Naval Reserve",
     siteUrl: `https://www.yourdomain.tld`,
     menuLinks: [
       {
@@ -16,8 +16,16 @@ module.exports = {
         link: "/gallery"
       },
       {
+        name: "Videos",
+        link: "/videos"
+      },
+      {
         name: "Concerts",
         link: "/concerts"
+      },
+      {
+        name: "Join the Band",
+        link: "/join"
       }
     ],
   },

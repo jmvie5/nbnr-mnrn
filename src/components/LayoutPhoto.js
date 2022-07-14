@@ -1,9 +1,13 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
+import BackgroundSlider from 'react-background-slider'
+import image1 from "../images/NBNR_StPat_2018.jpg"
+import image2 from "../images/NBNR_FierteMTL_2018.jpg"
+import image3 from "../images/NBNR_FierteMTL_2019.jpg"
 
 
-const Layout = ({ pageTitle, children }) => {
+const LayoutPhoto = ({ pageTitle, children }) => {
 
     const data = useStaticQuery(graphql`
         query {
@@ -33,9 +37,9 @@ const Layout = ({ pageTitle, children }) => {
                         key={link.name}
                         className="pr-3"
                         >
-                            <Link className="hover:text-black" to={link.link}>
-                                {link.name}
-                            </Link>
+                        <Link className="hover:text-black" to={link.link}>
+                            {link.name}
+                        </Link>
                         </li>
                     ))}
                     </ul>
@@ -43,8 +47,12 @@ const Layout = ({ pageTitle, children }) => {
             </header>
 
             <div>
-                <main className="font-sans text-xl text-black p-8 bg-transparent">
-                    <h1 className='text-2xl font-bold pb-8'>{pageTitle}</h1>
+                <BackgroundSlider
+                images={[image1, image2, image3]}
+                duration={10} transition={2}
+                />
+                <main className="flex place-content-center font-sans text-xl text-black p-8 bg-transparent">
+                    <h1 className='text-2xl font-bold pb-8 place-content-center'>{pageTitle}</h1>
                     {children}
                 </main>
                 
@@ -93,5 +101,5 @@ const Layout = ({ pageTitle, children }) => {
     )
 }
 
-export default Layout
+export default LayoutPhoto
 
