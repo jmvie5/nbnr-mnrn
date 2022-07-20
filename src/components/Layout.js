@@ -1,6 +1,9 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
+import useWindowSize from '../../modules/windowSize.js'
+
+import DropMenu from './DropMenu.js'
 
 
 const Layout = ({ pageTitle, children }) => {
@@ -19,6 +22,15 @@ const Layout = ({ pageTitle, children }) => {
         }
     `)
 
+    let smallWindow
+    let windowWidth = useWindowSize().width
+
+    if (windowWidth < 1000) {
+        smallWindow = true;
+    } else if (windowWidth > 1000) {
+        smallWindow = false;
+    };
+
     return (
         <div className="min-h-screen flex flex-col justify-between">
             <header className='flex justify-around bg-sky-800 opacity-75 p-8 text-white'>
@@ -26,7 +38,9 @@ const Layout = ({ pageTitle, children }) => {
                 <h1 className="font-sans text-2xl font-bold">
                     {data.site.siteMetadata.title}
                 </h1>
-                <nav>
+                {smallWindow
+                ? <div> {DropMenu()} </div>
+                : <nav>
                     <ul className="flex space-x-4">
                     {data.site.siteMetadata.menuLinks.map(link => (
                         <li
@@ -40,6 +54,7 @@ const Layout = ({ pageTitle, children }) => {
                     ))}
                     </ul>
                 </nav>
+                }
             </header>
 
             <div>
@@ -50,11 +65,11 @@ const Layout = ({ pageTitle, children }) => {
                 
             </div>
 
-            <footer className='flex justify-around bg-sky-800 opacity-75 text-white p-4 gap-x-8'>
+            <footer className='flex flex-row justify-around bg-sky-800 opacity-75 text-white p-4 gap-x-8 md:text-base text-sm'>
                 <div>
                     <h1 className='font-bold'>Contact information</h1>
                     <p>Find NBNR online:</p>
-                    <ul className='lg:flex lg:space-x-4 lg:items-baseline space-y-1.5'>
+                    <ul className='xl:flex xl:space-x-4 xl:items-baseline space-y-1.5'>
                         <li>   
                             <a href='https://www.instagram.com/nbnr.mnrn/' className='flex space-x-1.5'>
                                 <StaticImage src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png'
@@ -66,19 +81,19 @@ const Layout = ({ pageTitle, children }) => {
                             <a href='https://www.facebook.com/nbnr.mnrn/' className='flex space-x-1.5'>
                                 <StaticImage src='https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/800px-Facebook_f_logo_%282021%29.svg.png'
                                     alt='Facebook Logo' width="30" height="30" className='aspect-square'/>
-                                <p>@nbnr.mnrn</p>
+                                <p className='underline'>@nbnr.mnrn</p>
                             </a>
                         </li>
                         <li>
                             <a href='https://www.youtube.com/channel/UC9X4dG-fBwQ0fzSIoD063bw' className='flex space-x-1.5'>
                                 <StaticImage src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/langfr-1920px-YouTube_Logo_2017.svg.png"
                                     alt='YouTube Logo' width="45" height="30" className='aspect-{1.5}'/>
-                                <p>@NBNR_MNRN</p>
+                                <p className='underline'>@NBNR_MNRN</p>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div className='basis-3/5'>
                     <h1 className='font-bold'>Request NBNR</h1>
                     <p>
                         To inquire about a performance by NBNR, please send a detailed request to the officer in charge: 

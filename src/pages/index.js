@@ -6,11 +6,9 @@ const IndexPage = () => {
 
     return (
 
-    <div>
-        <LayoutPhoto pageTitle="Home">
+    <LayoutPhoto pageTitle="">
 
-        </LayoutPhoto>
-    </div>
+    </LayoutPhoto>
         
     )
 }
