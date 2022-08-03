@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 const Video = ({ linkId, title, description }) => {
+    //All params are strings
 
     const link = "https://www.youtube.com/embed/" + linkId
 

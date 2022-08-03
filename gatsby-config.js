@@ -43,5 +43,14 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-sharp",
     'gatsby-plugin-postcss',
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        path: `${__dirname}/src/intl`,
+        languages: [`en`, `fr`],
+        defaultLanguage: `en`,
+        redirect: false
+      },
+    },
   ],
 }

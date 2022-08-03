@@ -1,55 +1,62 @@
 import * as React from "react"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
+import { useIntl } from "gatsby-plugin-intl"
 
 const AboutPage = () => {
+    const intl = useIntl()
+
     return (
 
         <Layout pageTitle="About">
-            <div className="flex gap-16">
+            <div className="flex gap-16 mb-8">
                 <div className="basis-2/3 text-justify space-y-4">
-                    <p>
-                        The National Band of the Naval Reserve (NBNR), 
-                        formed in 1976, is comprised of Reservist musicians 
-                        chosen from the six Naval Reserve Division bands across Canada :
-                    </p>
+                    <intl.formatMessage id="About p1"/>
                     <ul className="list-disc pl-8">
-                        <li>HMCS TECUMSEH in Calgary, Alberta;</li>
-                        <li>HMCS CHIPPAWA in Winnepeg, Manitoba;</li>
-                        <li>HMCS STAR in Hamilton, Ontario;</li>
-                        <li>HMCS YORK in Toronto, Ontario; </li>
-                        <li>HMCS DONNACONA in Montreal, Quebec;</li>
-                        <li>HMCS MONTCALM in Québec, Quebec</li>
+                        <li><intl.formatMessage id="TECUMSEH"/></li>
+                        <li><intl.formatMessage id="CHIPPAWA"/></li>
+                        <li><intl.formatMessage id="STAR"/></li>
+                        <li><intl.formatMessage id="YORK"/></li>
+                        <li><intl.formatMessage id="DONNACONA"/></li>
+                        <li><intl.formatMessage id="MONTCALM"/></li>
                     </ul>
-                    <p>
-                        Members of NBNR are selected by the officer in charge, Lieutenant-Commander Alexandrea Kovacs, 
-                        based on their professionalism, dedication, and musical expertise. 
-                        NBNR performs in various ensemble formats, including parade band, concert band, 
-                        jazz band, and woodwind and brass ensembles. 
-                        NBNR has enjoyed collaborations with many organizations and bands from around the world, 
-                        including Chile, Germany, the United Kingdom, Australia, 
-                        the United States of America, and the Netherlands.
-                    </p>
-                    <p>
-                        NBNR trains and performs primarily during the summer months in support of the Naval Reserve’s 
-                        mission to represent the Canadian Armed Forces and to connect with Canadians. 
-                        From May to August, NBNR tours across Canada, providing musical support to civilian events, 
-                        such as the Calgary Stampede and Grey Cup parade, and military parades and ceremonies, 
-                        including visiting foreign dignitaries and changes of command. 
-                        As NBNR’s musicians are selected from six smaller bands, 
-                        the band is flexible and agile to support various operations throughout the year. 
-                        During the training year at their home units, musicians travel to join NBNR 
-                        for in-person specific training opportunities and events across Canada and internationally. 
-                        Naval Reserve musicians can also hone their trade skills with NBNR’s virtual training offerings.
-                    </p>
+                    <intl.formatMessage id="About p2" />
+                    <intl.formatMessage id="About p3" />
                 </div>
                 <div className="basis-1/3">
                     <StaticImage 
-                    alt="Picture of NBNR"
-                    src="../images/logo.jpg"/>
+                    alt="NBNR Logo"
+                    src="../images/logo.jpg"
+                    className="-z-10"/>
                 </div>
             </div>
-
+            <div className="flex flex-col gap-4 text-justify">
+                <h1 className="font-bold"><intl.formatMessage id="Events" /></h1>
+                <p><intl.formatMessage id="About Events" /></p>
+                <h1 className="font-bold mt-4"><intl.formatMessage id="Ensembles" /></h1>
+                <p><intl.formatMessage id="About Ensembles" /></p>
+                <p>
+                    <strong className="font-semibold"><intl.formatMessage id="Concert Band" /></strong><intl.formatMessage id="About Concert Band" />
+                </p>
+                <p>
+                    <strong className="font-semibold"><intl.formatMessage id="Parade Band" /></strong><intl.formatMessage id="About Parade Band" />
+                </p>
+                <p>
+                    <strong className="font-semibold"><intl.formatMessage id="Jazz Ensemble" /></strong><intl.formatMessage id="About Jazz Ensemble" />
+                </p>
+                <p>
+                    <strong className="font-semibold"><intl.formatMessage id="Flute Ensemble" /></strong><intl.formatMessage id="About Flute Ensemble" />
+                </p>
+                <p>
+                    <strong className="font-semibold"><intl.formatMessage id="Woodwind Ensemble" /></strong><intl.formatMessage id="About Woodwind Ensemble" />
+                </p>
+                <p>
+                    <strong className="font-semibold"><intl.formatMessage id="Brass Ensemble" /></strong><intl.formatMessage id="About Brass Ensemble" />
+                </p>
+                <p>
+                    <strong className="font-semibold"><intl.formatMessage id="Percussion Section" /></strong><intl.formatMessage id="About Percussion Section" />
+                </p>
+            </div>
         </Layout>
         
     )

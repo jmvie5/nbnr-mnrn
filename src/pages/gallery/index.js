@@ -17,7 +17,7 @@ const GalleryPage = ( {data} ) => {
                                     <GatsbyImage
                                     image={getImage(node.frontmatter.index_image)}
                                     alt={node.frontmatter.index_image_alt} 
-                                    className="h-full rounded-lg shadow-2xl shadow-sky-300/50"
+                                    className="h-full rounded-lg shadow-2xl shadow-sky-300/50 -z-10"
                                     />
                                 </div>
                             </Link>

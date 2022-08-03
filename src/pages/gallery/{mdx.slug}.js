@@ -16,6 +16,7 @@ const GalleryPost = ( {data} ) => {
             <GatsbyImage
                 image={image}
                 alt={data.mdx.frontmatter.index_image_alt}
+                className="-z-10"
             />
         </Layout>
 

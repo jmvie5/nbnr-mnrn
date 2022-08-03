@@ -4,7 +4,8 @@ import * as React from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
+import { useIntl, Link } from "gatsby-plugin-intl"
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -27,6 +28,8 @@ function classNames(...classes) {
             }
         }
     `)
+
+    const intl = useIntl()
 
     return (
         <Menu as="div" className="relative inline-block text-left">
@@ -56,7 +59,7 @@ function classNames(...classes) {
                                                 active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                                                 'block px-4 py-2 text-sm'
                                             )}>
-                                            {link.name}
+                                            <intl.formatMessage id={`${link.name}`} />
                                             </Link>
                                         )}
                                     </Menu.Item>

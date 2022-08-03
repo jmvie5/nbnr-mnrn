@@ -1,12 +1,19 @@
 import * as React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
+import { useIntl, Link, IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
 import useWindowSize from '../../modules/windowSize.js'
 
 import DropMenu from './DropMenu.js'
 
 
 const Layout = ({ pageTitle, children }) => {
+    const intl = useIntl()
+
+    const languageName = {
+        en: "EN",
+        fr: "FR"
+    }
 
     const data = useStaticQuery(graphql`
         query {
@@ -22,44 +29,64 @@ const Layout = ({ pageTitle, children }) => {
         }
     `)
 
-    let smallWindow
+    let isSmallWindow
     let windowWidth = useWindowSize().width
 
     if (windowWidth < 1000) {
-        smallWindow = true;
+        isSmallWindow = true;
     } else if (windowWidth > 1000) {
-        smallWindow = false;
+        isSmallWindow = false;
     };
 
     return (
         <div className="min-h-screen flex flex-col justify-between">
-            <header className='flex justify-around bg-sky-800 opacity-75 p-8 text-white'>
+            <header className='flex justify-around items-center bg-sky-800 opacity-75 p-8 text-white'>
                 <title>{pageTitle} | {data.site.siteMetadata.title}</title>
                 <h1 className="font-sans text-2xl font-bold">
-                    {data.site.siteMetadata.title}
+                    <intl.formatMessage id={`${data.site.siteMetadata.title}`} />
                 </h1>
-                {smallWindow
-                ? <div> {DropMenu()} </div>
-                : <nav>
-                    <ul className="flex space-x-4">
-                    {data.site.siteMetadata.menuLinks.map(link => (
-                        <li
-                        key={link.name}
-                        className="pr-3"
-                        >
-                            <Link className="hover:text-black" to={link.link}>
-                                {link.name}
-                            </Link>
-                        </li>
-                    ))}
-                    </ul>
-                </nav>
-                }
+                <div className='flex flex-col-reverse'>
+                    {isSmallWindow
+                    ? <div> {DropMenu()} </div>
+                    : <nav>
+                        <ul className="flex space-x-4">
+                        {data.site.siteMetadata.menuLinks.map(link => (
+                            <li
+                            key={link.name}
+                            className="pr-3"
+                            >
+                                <Link className="hover:text-black" to={link.link}>
+                                    <intl.formatMessage id={`${link.name}`} />
+                                </Link>
+                            </li>
+                        ))}
+                        </ul>
+                    </nav>
+                    }
+                    
+                    <div className='place-self-center justify-evenly'>
+                        <IntlContextConsumer>
+                            {({ languages, language: currentLocale }) =>
+                                languages.map(language => (
+                                    <button
+                                    key={language}
+                                    onClick={() => changeLocale(language)}
+                                    className={`mr-4 p-1 ${currentLocale === language ? "border border-black text-black rounded-xl" : "text-white"}`}
+                                    >
+                                    {languageName[language]}
+                                    </button>
+                                ))
+                                }
+                        </IntlContextConsumer>
+                    </div>
+                </div>
+
+                
             </header>
 
             <div>
                 <main className="font-sans text-xl text-black p-8 bg-transparent">
-                    <h1 className='text-2xl font-bold pb-8'>{pageTitle}</h1>
+                    <h1 className='text-3xl font-bold pb-8'><intl.formatMessage id={`${pageTitle}`}/></h1>
                     {children}
                 </main>
                 
@@ -67,8 +94,10 @@ const Layout = ({ pageTitle, children }) => {
 
             <footer className='flex flex-row justify-around bg-sky-800 opacity-75 text-white p-4 gap-x-8 md:text-base text-sm'>
                 <div>
-                    <h1 className='font-bold'>Contact information</h1>
-                    <p>Find NBNR online:</p>
+                    <h1 className='font-bold'>
+                        <intl.formatMessage id="Contact information"/>
+                    </h1>
+                    <intl.formatMessage id="Find NBNR online:"/>
                     <ul className='xl:flex xl:space-x-4 xl:items-baseline space-y-1.5'>
                         <li>   
                             <a href='https://www.instagram.com/nbnr.mnrn/' className='flex space-x-1.5'>
@@ -94,13 +123,17 @@ const Layout = ({ pageTitle, children }) => {
                     </ul>
                 </div>
                 <div className='basis-3/5'>
-                    <h1 className='font-bold'>Request NBNR</h1>
-                    <p>
-                        To inquire about a performance by NBNR, please send a detailed request to the officer in charge: 
-                    </p>
+                    <h1 className='font-bold'>
+                        <intl.formatMessage id="Request NBNR"/>
+                    </h1>
+                    <intl.formatMessage id="Inquire"/>
                     <ul className='list-none pl-8'>
-                        <li>Internal: +NAVRES HQ SSO BANDS NBNR@NAVRES HQ@Quebec</li>
-                        <li>External: <a href='mailto:bands.navreshq_fanfares.qgresnav@forces.gc.ca' className='underline'>bands.navreshq_fanfares.qgresnav@forces.gc.ca</a></li>
+                        <li>
+                            <intl.formatMessage id="Internal"/>
+                            : +NAVRES HQ SSO BANDS NBNR@NAVRES HQ@Quebec</li>
+                        <li>
+                            <intl.formatMessage id="External"/>
+                            : <a href='mailto:bands.navreshq_fanfares.qgresnav@forces.gc.ca' className='underline'>bands.navreshq_fanfares.qgresnav@forces.gc.ca</a></li>
                     </ul>
                 </div>
             </footer>

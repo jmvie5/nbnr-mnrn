@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 const Concert = ({ date, title, adress, time, ensemble, ticketsLink }) => {
+    //All params are strings
 
     const mapLink = 'https://www.google.ca/maps/search/' + adress;
     
