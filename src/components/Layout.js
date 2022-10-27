@@ -71,7 +71,7 @@ const Layout = ({ pageTitle, children }) => {
                                     <button
                                     key={language}
                                     onClick={() => changeLocale(language)}
-                                    className={`mr-4 p-1 ${currentLocale === language ? "border border-black text-black rounded-xl" : "text-white"}`}
+                                    className={`mr-4 p-1 ${currentLocale === language ? "underline text-black rounded-xl" : "text-white"}`}
                                     >
                                     {languageName[language]}
                                     </button>

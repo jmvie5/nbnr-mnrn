@@ -1,16 +1,18 @@
 import * as React from 'react'
+import { useIntl } from 'gatsby-plugin-intl'
 
 const Video = ({ linkId, title, description }) => {
-    //All params are strings
-
+    //linlId = string
+    //title and description = {en, fr}
+    const intl = useIntl()
     const link = "https://www.youtube.com/embed/" + linkId
 
     return (
         <div className="flex flex-col justify-between p-4 gap-2">
-            <h1 className="font-bold">{title}</h1>
+            <h1 className="font-bold">{title[intl.locale]}</h1>
             <iframe src={link} title={title} allowFullScreen="allowfullscreen" frameBorder="0" 
                 className='aspect-video w-full'/>
-            <p className="text-base">{description}</p>
+            <p className="text-base">{description[intl.locale]}</p>
         </div>
     )
 }

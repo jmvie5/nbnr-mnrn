@@ -1,11 +1,11 @@
 {
-    "National Band of the Naval Reserve": "Musique Nationale de la Réserve Navale",
+    "National Band of the Naval Reserve": "Musique nationale de la Réserve navale",
     "Home" : "Accueil",
     "About" : "À propos",
     "Gallery" : "Gallerie",
     "Videos" : "Vidéos",
     "Concerts" : "Concerts",
-    "Join the Band" : "Joindre la Musique",
+    "Join the Band" : "Rejoindre la Musique",
 
     "Contact information" : "Contact",
     "Find NBNR online:" : "Pour trouver la MNRN en ligne:",
@@ -40,5 +40,19 @@
     "Brass Ensemble" : "Ensemble de cuivres",
     "About Brass Ensemble" : " – Les cuivres de la MNRN forment un ensemble harmonieux de musiciens en quatuor, en quintette ou en grand ensemble de cuivres qui interprètent une variété de musique allant du classique au contemporain en passant par le swing.",
     "Percussion Section" : "Ensemble de percussion",
-    "About Percussion Section" : " – Les percussionnistes de la MNRN peuvent se joindre à n’importe quel ensemble susmentionné ou se produire en tant qu’ensemble autonome jouant à la fois rythmes et mélodies."
+    "About Percussion Section" : " – Les percussionnistes de la MNRN peuvent se joindre à n’importe quel ensemble susmentionné ou se produire en tant qu’ensemble autonome jouant à la fois rythmes et mélodies.",
+    
+    "Ensemble" : "Ensemble",
+    "TICKETS" : "BILLETS",
+    "FREE" : "GRATUIT",
+
+    "Concert time zones" : "Les heures de concert sont indiquées dans le fuseau horaire local.",
+
+    "Eastern Region" : "Région de l'Est",
+    "Center Region" : "Région centrale",
+    "Western Region" : "Région de l'Ouest",
+    "HMCS" : "NCSM",
+    "Telephone" : "Téléphone",
+    "Recruiting" : "Recrutement",
+    "Email" : "Courriel"
 }
