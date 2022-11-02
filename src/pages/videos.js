@@ -15,7 +15,7 @@ const VideoPage = () => {
     return (
 
     <div>
-        <Layout pageTitle="Videos">
+        <Layout pageTitle="Videos" description="Recordings and other videos of NBNR.">
             <div className="flex grid md:grid-cols-2 grid-col-1 gap-4 place-content-center mb-8">
                 <Video linkId="r-ygKKxYcWU" title={{"en" : "Meet the Bands!", "fr" : "Rencontrez les Musiques!"}} description={{"en" : "Check out what life is like as a musician in Canada’s Naval Reserve! Meet the bands and find out if a life of adventure, travel, and playing music is for you. ", "fr" : "Découvrez ce qu’est la vie d’un musicien dans la Réserve navale du Canada ! Rencontrez les Musiques et découvrez si une vie d’aventure, de voyages et de musique est faite pour vous."}} />
                 <Video linkId="HrFHISfk81I" title={{"en": "Cantina Band", "fr": "Cantina Band"}} description={{"en" : "NBNR presents “Cantina Band” by John Williams (aka “Mad About Me” by Figran D’an and the Modal Nodes) for Star Wars Day, May 4th 2022.", "fr" : "La MNRN présente « Cantina Band » de John Williams (alias « Mad About Me » de Figran D'an and the Modal Nodes) pour la Journée Star Wars, le 4 mai 2022."}} />

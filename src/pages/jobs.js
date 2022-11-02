@@ -17,7 +17,7 @@ const JobsPage = () => {
 
     return (
 
-        <Layout pageTitle="Jobs">
+        <Layout pageTitle="Jobs" description="Job opportunities with NBNR and how to apply.">
             <div className="flex flex-col space-y-8">
                 {intro}
                 

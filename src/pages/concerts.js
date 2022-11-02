@@ -9,7 +9,7 @@ const ConcertsPage = () => {
     return (
 
         <div>
-            <Layout pageTitle="Concerts">
+            <Layout pageTitle="Concerts" description="NBRN upcoming concerts.">
                 <intl.formatMessage id="No Concert"/>
                 <div className="justify-center flex flex-col space-y-4 divide-y-2 divide-gray-800">
                     
