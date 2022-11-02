@@ -1,23 +1,23 @@
 import * as React from 'react'
 
-import BackgroundSlider from 'react-background-slider'
 import Layout from './Layout'
-import image1 from "../images/NBNR_StPat_2018.jpg"
-import image2 from "../images/NBNR_FierteMTL_2018.jpg"
-import image3 from "../images/NBNR_FierteMTL_2019.jpg"
 
+import image2 from "../../gallery/gallery/Ship-2.webp"
+/*
+import image1 from "../../gallery/gallery/MarchingBand-2.webp"
+
+import image3 from "../../gallery/gallery/NBNR_FierteMTL_2019.webp"
+import image4 from "../../gallery/gallery/NBNR_StPat_2018.webp"
+import image5 from "../../gallery/gallery/Ship-1.webp"
+import image6 from "../../gallery/gallery/Stampede-2.webp"
+*/
 
 const LayoutPhoto = ({ pageTitle, children }) => {
 
-
     return (
-        <Layout pageTitle={pageTitle}>
-            <BackgroundSlider
-                images={[image1, image2, image3]}
-                duration={10} transition={2}
-                />
-            {children}
-        </Layout>
+            <div className={`bg-center bg-cover`} style={{backgroundImage: `url(${image2})`}}>
+                <Layout pageTitle={pageTitle} >{children}</Layout>
+            </div>
     )
 }
 

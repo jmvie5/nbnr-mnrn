@@ -10,7 +10,8 @@ const AboutPage = () => {
 
         <Layout pageTitle="About">
             <div className="flex gap-16 mb-8">
-                <div className="basis-2/3 text-justify space-y-4">
+                <div className="text-justify space-y-4">
+                    <StaticImage alt="NBNR Logo" src="../images/logo.jpg" className="float-right ml-8 max-w-[40%]"/>
                     <intl.formatMessage id="About p1"/>
                     <ul className="list-disc pl-8">
                         <li><intl.formatMessage id="TECUMSEH"/></li>
@@ -22,12 +23,6 @@ const AboutPage = () => {
                     </ul>
                     <intl.formatMessage id="About p2" />
                     <intl.formatMessage id="About p3" />
-                </div>
-                <div className="basis-1/3">
-                    <StaticImage 
-                    alt="NBNR Logo"
-                    src="../images/logo.jpg"
-                    className="-z-10"/>
                 </div>
             </div>
             <div className="flex flex-col gap-4 text-justify">

@@ -24,8 +24,8 @@ module.exports = {
         link: "/concerts"
       },
       {
-        name: "Join the Band",
-        link: "/join"
+        name: "Jobs",
+        link: "/jobs"
       }
     ],
   },
@@ -49,7 +49,7 @@ module.exports = {
         path: `${__dirname}/src/intl`,
         languages: [`en`, `fr`],
         defaultLanguage: `en`,
-        redirect: false
+        redirect: true
       },
     },
   ],

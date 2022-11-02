@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
 import { useIntl, Link, IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
 import useWindowSize from '../../modules/windowSize.js'
-
 import DropMenu from './DropMenu.js'
 
 
@@ -38,11 +37,15 @@ const Layout = ({ pageTitle, children }) => {
         isSmallWindow = false;
     };
 
+    /*<a href='https://www.canada.ca/' className='justify-self-end -mt-8'>
+<StaticImage src="../images/1920px-Canada_wordmark.svg.png" alt="Canada" width="170" height="40"/> 
+</a>*/
     return (
         <div className="min-h-screen flex flex-col justify-between">
-            <header className='flex justify-around items-center bg-sky-800 opacity-75 p-8 text-white'>
+            <header className='flex justify-around items-center bg-sky-800 opacity-75 p-4 text-white z-50'>
                 <title>{pageTitle} | {data.site.siteMetadata.title}</title>
-                <h1 className="font-sans text-2xl font-bold">
+                <StaticImage src="../images/logoRound.webp" alt="NBNR Logo" width="80" height="80" className='aspect-square' />
+                <h1 className="pl-4 pr-4 font-sans text-2xl font-bold">
                     <intl.formatMessage id={`${data.site.siteMetadata.title}`} />
                 </h1>
                 <div className='flex flex-col-reverse'>
@@ -92,7 +95,7 @@ const Layout = ({ pageTitle, children }) => {
                 
             </div>
 
-            <footer className='flex flex-row justify-around bg-sky-800 opacity-75 text-white p-4 gap-x-8 md:text-base text-sm'>
+            <footer className='flex flex-col sm:flex-row items-center sm:items-start bg-sky-800 opacity-75 text-white p-4 gap-8 text-sm md:text-base' >
                 <div>
                     <h1 className='font-bold'>
                         <intl.formatMessage id="Contact information"/>

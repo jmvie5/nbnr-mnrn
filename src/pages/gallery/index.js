@@ -55,12 +55,15 @@ const GalleryPage = ( {data} ) => {
 
     return (
         <Layout pageTitle="Gallery">
-            <div class="grid grid-cols-2 gap-12 place-content-center">
-                {data.allFile.edges.map(edge => {
-                    let img = getImage(edge.node.childImageSharp.gatsbyImageData);
-                return <GatsbyImage image={img} class="transition duration-300 ease-in-out hover:scale-105"/>
-                })}
+            <div className="relative">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 place-content-center z-0">
+                    {data.allFile.edges.map(edge => {
+                        let img = getImage(edge.node.childImageSharp.gatsbyImageData);
+                    return <GatsbyImage className="transition duration-300 ease-in-out hover:scale-105" image={img}/>
+                    })}
+                </div>
             </div>
+            
                 
         </Layout>
     )
@@ -68,7 +71,7 @@ const GalleryPage = ( {data} ) => {
 
 export const query = graphql`
 query {
-    allFile(filter: {extension: {regex: "/(jpg)|(jpeg)|(png)/"}, dir: {regex: "/gallery/gallery/"}}) {
+    allFile(filter: {extension: {regex: "/(jpg)|(jpeg)|(png)|(webp)/"}, dir: {regex: "/gallery/gallery/"}}) {
         edges {
             node {
                 id

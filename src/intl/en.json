@@ -5,7 +5,7 @@
     "Gallery" : "Gallery",
     "Videos" : "Videos",
     "Concerts" : "Concerts",
-    "Join the Band" : "Join the Band",
+    "Jobs" : "Jobs",
 
     "Contact information" : "Contact information",
     "Find NBNR online:" : "Find NBNR online:",
@@ -46,6 +46,7 @@
     "TICKETS" : "TICKETS",
     "FREE" : "FREE",
 
+    "No Concert" : "Upcoming concerts will be added here.",
     "Concert time zones" : "Concert times are shown in the local timezone.",
 
     "Eastern Region" : "Eastern Region",
