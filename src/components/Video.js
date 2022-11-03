@@ -9,10 +9,10 @@ const Video = ({ linkId, title, description }) => {
 
     return (
         <div className="flex flex-col justify-between p-4 gap-2">
-            <h1 className="font-bold">{title[intl.locale]}</h1>
+            <h1 className="font-bold text-xl">{title[intl.locale]}</h1>
             <iframe src={link} title={title} allowFullScreen="allowfullscreen" frameBorder="0" 
                 className='aspect-video w-full'/>
-            <p className="text-base">{description[intl.locale]}</p>
+            <p className="">{description[intl.locale]}</p>
         </div>
     )
 }

@@ -21,35 +21,35 @@ const AboutPage = () => {
                         <li><intl.formatMessage id="DONNACONA"/></li>
                         <li><intl.formatMessage id="MONTCALM"/></li>
                     </ul>
-                    <intl.formatMessage id="About p2" />
-                    <intl.formatMessage id="About p3" />
+                    <p><intl.formatMessage id="About p2" /></p>
+                    <p><intl.formatMessage id="About p3" /></p>
                 </div>
             </div>
             <div className="flex flex-col gap-4 text-justify">
-                <h1 className="font-bold"><intl.formatMessage id="Events" /></h1>
+                <h1 className="font-bold text-lg"><intl.formatMessage id="Events" /></h1>
                 <p><intl.formatMessage id="About Events" /></p>
-                <h1 className="font-bold mt-4"><intl.formatMessage id="Ensembles" /></h1>
+                <h1 className="font-bold mt-4 text-lg"><intl.formatMessage id="Ensembles" /></h1>
                 <p><intl.formatMessage id="About Ensembles" /></p>
                 <p>
-                    <strong className="font-semibold"><intl.formatMessage id="Concert Band" /></strong><intl.formatMessage id="About Concert Band" />
+                    <strong className="font-semibold text-lg"><intl.formatMessage id="Concert Band" /></strong><intl.formatMessage id="About Concert Band" />
                 </p>
                 <p>
-                    <strong className="font-semibold"><intl.formatMessage id="Parade Band" /></strong><intl.formatMessage id="About Parade Band" />
+                    <strong className="font-semibold text-lg"><intl.formatMessage id="Parade Band" /></strong><intl.formatMessage id="About Parade Band" />
                 </p>
                 <p>
-                    <strong className="font-semibold"><intl.formatMessage id="Jazz Ensemble" /></strong><intl.formatMessage id="About Jazz Ensemble" />
+                    <strong className="font-semibold text-lg"><intl.formatMessage id="Jazz Ensemble" /></strong><intl.formatMessage id="About Jazz Ensemble" />
                 </p>
                 <p>
-                    <strong className="font-semibold"><intl.formatMessage id="Flute Ensemble" /></strong><intl.formatMessage id="About Flute Ensemble" />
+                    <strong className="font-semibold text-lg"><intl.formatMessage id="Flute Ensemble" /></strong><intl.formatMessage id="About Flute Ensemble" />
                 </p>
                 <p>
-                    <strong className="font-semibold"><intl.formatMessage id="Woodwind Ensemble" /></strong><intl.formatMessage id="About Woodwind Ensemble" />
+                    <strong className="font-semibold text-lg"><intl.formatMessage id="Woodwind Ensemble" /></strong><intl.formatMessage id="About Woodwind Ensemble" />
                 </p>
                 <p>
-                    <strong className="font-semibold"><intl.formatMessage id="Brass Ensemble" /></strong><intl.formatMessage id="About Brass Ensemble" />
+                    <strong className="font-semibold text-lg"><intl.formatMessage id="Brass Ensemble" /></strong><intl.formatMessage id="About Brass Ensemble" />
                 </p>
                 <p>
-                    <strong className="font-semibold"><intl.formatMessage id="Percussion Section" /></strong><intl.formatMessage id="About Percussion Section" />
+                    <strong className="font-semibold text-lg"><intl.formatMessage id="Percussion Section" /></strong><intl.formatMessage id="About Percussion Section" />
                 </p>
             </div>
         </Layout>

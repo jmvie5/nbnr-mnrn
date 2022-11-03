@@ -81,24 +81,20 @@ const Layout = ({ pageTitle, description, children }) => {
                         </IntlContextConsumer>
                     </div>
                 </div>
-
-                
             </header>
 
             <div>
-                <main className="font-sans text-xl text-black p-8 bg-transparent">
+                <main className="font-sans text-black p-8 bg-transparent">
                     <h1 className='text-3xl font-bold pb-8'><intl.formatMessage id={`${pageTitle}`}/></h1>
                     {children}
                 </main>
-                
             </div>
 
             <footer className='flex flex-col sm:flex-row items-center sm:items-start bg-sky-800/75 text-white p-4 gap-8 text-sm md:text-base' >
                 <div className='basis-2/5'>
-                    <h1 className='font-bold'>
+                    <h1 className='font-bold text-lg'>
                         <intl.formatMessage id="Contact information"/>
                     </h1>
-                    <intl.formatMessage id="Find NBNR online:"/>
                     <div className='mt-2'>
                         <div className='flex flex-col xl:flex-row xl:space-x-4 space-y-2 xl:space-y-0'>
                             <a href='https://www.instagram.com/nbnr.mnrn/' className='flex space-x-1.5'>
@@ -120,7 +116,7 @@ const Layout = ({ pageTitle, description, children }) => {
                             </a>
                         </div>
                         <div  className='mt-4'>
-                            <a href='https://www.canada.ca/'>
+                            <a href={(intl.locale === "en") ? 'https://forces.ca/en/contact-us/' : "https://forces.ca/fr/nous-joindre/"}>
                                 <StaticImage src="../images/1920px-Canada_wordmark.svg.png" alt="Canada" width="170" height="40"/> 
                             </a>
                         </div>
@@ -128,10 +124,10 @@ const Layout = ({ pageTitle, description, children }) => {
                     </div>
                 </div>
                 <div className='basis-3/5'>
-                    <h1 className='font-bold'>
+                    <h1 className='font-bold text-lg'>
                         <intl.formatMessage id="Request NBNR"/>
                     </h1>
-                    <intl.formatMessage id="Inquire"/>
+                    <p><intl.formatMessage id="Inquire"/></p>
                     <ul className='list-none pl-8'>
                         <li>
                             <intl.formatMessage id="Internal"/>

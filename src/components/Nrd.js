@@ -10,7 +10,7 @@ const Nrd = ({ name, street, city, telephone, recruitingPhone, email }) => {
 
     return (
         <div className='flex flex-col  space-y-2'>
-            <h1 className='font-bold'><intl.formatMessage id="HMCS"/> {name}</h1>
+            <h1 className='font-bold text-xl'><intl.formatMessage id="HMCS"/> {name}</h1>
             <a className="text-blue-800 underline" href={mapLink}>
                 <p>{street}</p>
                 <p>{city}</p>

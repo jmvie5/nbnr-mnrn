@@ -24,7 +24,7 @@ const JobsPage = () => {
                 <div className="space-y-8">
                     <div className="space-y-4">
                         <h1 className="font-bold text-2xl"><intl.formatMessage id="Eastern Region" /> :</h1>
-                        <div className="grid grid-cols-2 space-x-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 sm:space-x-4 space-y-6 sm:space-y-0">
                             <Nrd name="Montcalm" street="170 Rue Dalhousie"
                                 city="Québec, QC G1K 8M7" telephone="(418) 694-5560 ext. 5498"
                                 recruitingPhone="(418) 694-5560 ext. 5470" email="Emploi_Montcalm-Jobs_Montcalm@forces.gc.ca" />
@@ -36,7 +36,7 @@ const JobsPage = () => {
                     
                     <div className="space-y-4">
                         <h1 className="font-bold text-2xl"><intl.formatMessage id="Center Region"/> :</h1>
-                        <div className="grid grid-cols-2 space-x-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 sm:space-x-4 space-y-6 sm:space-y-0">
                             <Nrd name="York" street="659 Lake Shore Boulevard West"
                                 city="Toronto, ON M5V 1A7" telephone="(416) 635-4400 ext. 6310"
                                 recruitingPhone="(416) 635-4400" email="Jobs_York-Emploi_York@forces.gc.ca" />
@@ -48,7 +48,7 @@ const JobsPage = () => {
 
                     <div className="space-y-4">
                         <h1 className="font-bold text-2xl"><intl.formatMessage id="Western Region"/> :</h1>
-                        <div className="grid grid-cols-2 space-x-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 sm:space-x-4 space-y-6 sm:space-y-0">
                             <Nrd name="Chippawa" street="1 Navy Way"
                                 city="Winnipeg, MB R3C 4J7" telephone="(204) 943-7745 ext. 224"
                                 recruitingPhone="(204) 943-7745 ext. 3242" email="Jobs_Chippawa-Emploi_Chippawa@forces.gc.ca" />
