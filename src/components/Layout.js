@@ -36,14 +36,21 @@ const Layout = ({ pageTitle, description, children }) => {
     } else if (windowWidth > 1000) {
         isSmallWindow = false;
     };
-
+/*<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png"/>
+                    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png"/>
+                    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png"/>
+                    <link rel="manifest" href="../images/favicon/site.webmanifest"/>
+*/
     return (
         <div className="min-h-screen flex flex-col justify-between">
-            <header className='flex justify-around items-center bg-sky-800/75 p-4 text-white z-50'>
-                <title>{pageTitle} | {data.site.siteMetadata.title}</title>
-                <meta name="description" content={description}/>
-                <StaticImage src="../images/logoRound.webp" alt="NBNR Logo" width="80" height="80" className='aspect-square' />
-                <h1 className="pl-4 pr-4 font-sans text-2xl font-bold">
+            <header className='flex justify-around items-center bg-sky-800/75 p-2 text-white z-50'>
+                <head>
+                    
+                    <title>{pageTitle} | {data.site.siteMetadata.title}</title>
+                    <meta name="description" content={description}/>
+                </head>
+                <StaticImage src="../../src/images/logoRound.png" alt="NBNR Logo" width="90" height="90" className='aspect-square min-w-max' />
+                <h1 className="pl-4 pr-4 font-sans text-3xl font-bold">
                     <intl.formatMessage id={`${data.site.siteMetadata.title}`} />
                 </h1>
                 <div className='flex flex-col-reverse'>
@@ -90,7 +97,8 @@ const Layout = ({ pageTitle, description, children }) => {
                 </main>
             </div>
 
-            <footer className='flex flex-col sm:flex-row items-center sm:items-start bg-sky-800/75 text-white p-4 gap-8 text-sm md:text-base' >
+            <footer className='flex flex-col sm:flex-row items-center sm:items-start bg-sky-800/75 text-white p-4
+             gap-8 text-sm md:text-base' >
                 <div className='basis-2/5'>
                     <h1 className='font-bold text-lg'>
                         <intl.formatMessage id="Contact information"/>

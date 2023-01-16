@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "National Band of the Naval Reserve",
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://nbnr.ca`,
     menuLinks: [
       {
         name: "Home",
@@ -50,7 +50,19 @@ module.exports = {
         languages: [`en`, `fr`],
         defaultLanguage: `en`,
         redirect: true
-      },
+      }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `National Band of the Naval Reserve`,
+        short_name: `NBNR`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/images/icon.png`
+      }
     },
   ],
 }
