@@ -45,6 +45,15 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-sharp",
     'gatsby-plugin-postcss',
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://nbnr.ca',
+        sitemap: 'https://nbnr.ca/sitemap-index.xml',
+        policy: [{userAgent: '*', allow: '/'}]
+      }
+    },
     {
       resolve: `gatsby-plugin-intl`,
       options: {
