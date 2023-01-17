@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/solid'
+import { ChevronDownIcon } from '@heroicons/react/24/solid'
 
 import { useStaticQuery, graphql } from 'gatsby'
 import { useIntl, Link } from "gatsby-plugin-intl"
