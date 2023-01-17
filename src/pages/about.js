@@ -2,6 +2,7 @@ import * as React from "react"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import { useIntl } from "gatsby-plugin-intl"
+import { SEO } from "../components/seo"
 
 const AboutPage = () => {
     const intl = useIntl()
@@ -58,3 +59,7 @@ const AboutPage = () => {
 }
 
 export default AboutPage
+
+export const Head = () => (
+        <SEO title="About" description="The National Band of the Naval Reserve (NBNR), formed in 1976, is comprised of Reservist musicians chosen from the six Naval Reserve Division bands across Canada."/>
+)

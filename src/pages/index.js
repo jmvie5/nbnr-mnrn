@@ -1,5 +1,6 @@
 import * as React from "react"
 import LayoutPhoto from "../components/LayoutPhoto"
+import { SEO } from "../components/seo"
 
 
 const IndexPage = () => {
@@ -13,3 +14,7 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const Head = () => (
+    <SEO />
+)

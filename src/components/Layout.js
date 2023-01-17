@@ -44,11 +44,9 @@ const Layout = ({ pageTitle, description, children }) => {
     return (
         <div className="min-h-screen flex flex-col justify-between">
             <header className='flex justify-around items-center bg-sky-800/75 p-2 text-white z-50'>
-                <head>
-                    
-                    <title>{pageTitle} | {data.site.siteMetadata.title}</title>
-                    <meta name="description" content={description}/>
-                </head>
+                
+                <title>{pageTitle} | {data.site.siteMetadata.title}</title>
+
                 <StaticImage src="../../src/images/logoRound.png" alt="NBNR Logo" width="90" height="90" className='aspect-square min-w-max' />
                 <h1 className="pl-4 pr-4 font-sans text-3xl font-bold">
                     <intl.formatMessage id={`${data.site.siteMetadata.title}`} />

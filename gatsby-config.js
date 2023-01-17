@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: "National Band of the Naval Reserve",
+    description: "National Band of the Naval Reserve",
     siteUrl: `https://nbnr.ca`,
+    image: `/src/images/icon.png`,
     menuLinks: [
       {
         name: "Home",

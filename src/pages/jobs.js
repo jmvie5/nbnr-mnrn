@@ -2,6 +2,7 @@ import * as React from "react"
 import Layout from "../components/Layout"
 import Nrd from "../components/Nrd"
 import { useIntl } from "gatsby-plugin-intl"
+import { SEO } from "../components/seo"
 
 const JobsPage = () => {
     const intl = useIntl()
@@ -67,3 +68,7 @@ const JobsPage = () => {
 }
 
 export default JobsPage
+
+export const Head = () => (
+    <SEO title="Jobs" description="Job opportunities with NBNR and how to apply."/>
+)

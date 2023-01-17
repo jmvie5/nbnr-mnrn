@@ -2,6 +2,7 @@ import * as React from "react"
 import Layout from "../components/Layout"
 import Concert from "../components/Concert"
 import { useIntl } from "gatsby-plugin-intl"
+import { SEO } from "../components/seo"
 
 const ConcertsPage = () => {
     const intl = useIntl();
@@ -21,3 +22,7 @@ const ConcertsPage = () => {
 }
 
 export default ConcertsPage
+
+export const Head = () => (
+    <SEO title="Concerts" description="NBRN upcoming concerts."/>
+)
