@@ -26,7 +26,7 @@ const AboutPage = () => {
                     <p><intl.formatMessage id="About p3" /></p>
                 </div>
             </div>
-            <div className="flex flex-col gap-4 text-justify">
+            <div className="flex flex-col gap-4 text-left">
                 <h1 className="font-bold text-lg"><intl.formatMessage id="Events" /></h1>
                 <p><intl.formatMessage id="About Events" /></p>
                 <h1 className="font-bold mt-4 text-lg"><intl.formatMessage id="Ensembles" /></h1>

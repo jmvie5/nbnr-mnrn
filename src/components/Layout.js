@@ -6,7 +6,7 @@ import useWindowSize from '../../modules/windowSize.js'
 import DropMenu from './DropMenu.js'
 
 
-const Layout = ({ pageTitle, description, children }) => {
+const Layout = ({ pageTitle, children }) => {
     const intl = useIntl()
 
     const languageName = {
@@ -36,11 +36,7 @@ const Layout = ({ pageTitle, description, children }) => {
     } else if (windowWidth > 1000) {
         isSmallWindow = false;
     };
-/*<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png"/>
-                    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png"/>
-                    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png"/>
-                    <link rel="manifest" href="../images/favicon/site.webmanifest"/>
-*/
+
     return (
         <div className="min-h-screen flex flex-col justify-between">
             <header className='flex justify-around items-center bg-sky-800/75 p-2 text-white z-50'>
@@ -48,12 +44,12 @@ const Layout = ({ pageTitle, description, children }) => {
                 <title>{pageTitle} | {data.site.siteMetadata.title}</title>
 
                 <StaticImage src="../../src/images/logoRound.png" alt="NBNR Logo" width="90" height="90" className='aspect-square min-w-max' />
-                <h1 className="pl-4 pr-4 font-sans text-3xl font-bold">
+                <h1 className="pl-4 pr-4 font-sans text-3xl text-center font-bold">
                     <intl.formatMessage id={`${data.site.siteMetadata.title}`} />
                 </h1>
-                <div className='flex flex-col-reverse'>
+                <div className='flex flex-col-reverse p-2'>
                     {isSmallWindow
-                    ? <div> {DropMenu()} </div>
+                    ? <div className='place-self-center'> {DropMenu()} </div>
                     : <nav>
                         <ul className="flex space-x-4">
                         {data.site.siteMetadata.menuLinks.map(link => (
@@ -70,14 +66,14 @@ const Layout = ({ pageTitle, description, children }) => {
                     </nav>
                     }
                     
-                    <div className='place-self-center justify-evenly pb-2'>
+                    <div className='flex flex-row place-self-center justify-evenly pb-2 min-w-12'>
                         <IntlContextConsumer>
                             {({ languages, language: currentLocale }) =>
                                 languages.map(language => (
                                     <button
                                     key={language}
                                     onClick={() => changeLocale(language)}
-                                    className={`mr-4 p-1 ${currentLocale === language ? "underline text-black rounded-xl" : "text-white"}`}
+                                    className={`p-2 ${currentLocale === language ? "underline text-black rounded-xl" : "text-white"}`}
                                     >
                                     {languageName[language]}
                                     </button>

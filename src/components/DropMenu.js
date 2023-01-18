@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/24/solid'
+import { Bars3Icon } from '@heroicons/react/24/solid'
 
 import { useStaticQuery, graphql } from 'gatsby'
 import { useIntl, Link } from "gatsby-plugin-intl"
@@ -34,9 +34,8 @@ function classNames(...classes) {
     return (
         <Menu as="div" className="relative inline-block text-left">
         <div>
-            <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
-            Menu
-            <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
+            <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-2 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
+            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </Menu.Button>
         </div>
 
