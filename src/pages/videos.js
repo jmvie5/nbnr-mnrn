@@ -2,7 +2,7 @@ import * as React from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import Layout from "../components/Layout"
 import Video from "../components/Video"
-import { SEO } from "../components/seo"
+import { Seo } from "../components/Seo"
 
 
 const VideoPage = () => {
@@ -36,5 +36,5 @@ const VideoPage = () => {
 export default VideoPage
 
 export const Head = () => (
-    <SEO title="Videos" description="Recordings and other videos of NBNR."/>
+    <Seo title="Videos" description="Recordings and other videos of NBNR."/>
 )

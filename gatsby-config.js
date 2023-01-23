@@ -81,7 +81,7 @@ module.exports = {
         short_name: `NBNR`,
         start_url: `/`,
         background_color: `#f7f0eb`,
-        theme_color: `#0ea5e9`,
+        theme_color: `#075985bf`,
         display: `standalone`,
         icon: `src/images/icon.png`
       }

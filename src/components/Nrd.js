@@ -18,7 +18,7 @@ const Nrd = ({ name, street, city, telephone, recruitingPhone, email }) => {
             <div>
                 <p><intl.formatMessage id="Telephone"/>: {telephone}</p>
                 <p><intl.formatMessage id="Recruiting"/>: {recruitingPhone}</p>
-                <p><intl.formatMessage id="Email"/>: <a href={emailLink} className='underline text-blue-700'>{email}</a></p>
+                <p className='break-words'><intl.formatMessage id="Email"/>: <a href={emailLink} className='underline text-blue-700'>{email}</a></p>
             </div>
             
         </div>

@@ -2,7 +2,7 @@ import * as React from "react"
 import Layout from "../components/Layout"
 import Nrd from "../components/Nrd"
 import { useIntl } from "gatsby-plugin-intl"
-import { SEO } from "../components/seo"
+import { Seo } from "../components/Seo"
 
 const JobsPage = () => {
     const intl = useIntl()
@@ -12,7 +12,7 @@ const JobsPage = () => {
 
     if (intl.locale === "fr") {
         intro = <div className="space-y-4"><p>Le personnel de la MNRN se compose principalement de musiciens des six divisions de la Réserve navale (DRN) suivantes , mais elle accueille également des musiciens de toutes les DRN.</p><p>Une liste complète des DRN est disponible <a href="https://www.canada.ca/fr/marine/organisation/notre-organisation/structure/resnav/divisions.html" className="underline text-blue-700">ici</a>.
-        Nous vous encourageons à communiquer avec la DRN la plus près de chez vous pour obtenir de plus amples renseignements sur les procédures d'enrôlement dans la Marine royale du Canada.</p><p>Vous pouvez obtenir plus d'informations sur le métier de musicien dans les Forces armées canadiennes <a href="https://forces.ca/fr/carriere/musicien/" className="underline text-blue-700">ici</a></p></div>;
+        Nous vous encourageons à communiquer avec la DRN la plus près de chez vous pour obtenir de plus amples renseignements sur les procédures d'enrôlement dans la Marine royale canadienne.</p><p>Vous pouvez obtenir plus d'informations sur le métier de musicien dans les Forces armées canadiennes <a href="https://forces.ca/fr/carriere/musicien/" className="underline text-blue-700">ici</a></p></div>;
     }
     
 
@@ -70,5 +70,5 @@ const JobsPage = () => {
 export default JobsPage
 
 export const Head = () => (
-    <SEO title="Jobs" description="Job opportunities with NBNR and how to apply."/>
+    <Seo title="Jobs" description="Job opportunities with NBNR and how to apply."/>
 )

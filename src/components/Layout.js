@@ -40,32 +40,13 @@ const Layout = ({ pageTitle, children }) => {
     return (
         <div className="min-h-screen flex flex-col justify-between">
             <header className='flex justify-around items-center bg-sky-800/75 p-2 text-white z-50'>
-                
                 <title>{pageTitle} | {data.site.siteMetadata.title}</title>
 
                 <StaticImage src="../../src/images/logoRound.png" alt="NBNR Logo" width="90" height="90" className='aspect-square min-w-max' />
                 <h1 className="pl-4 pr-4 font-sans text-3xl text-center font-bold">
                     <intl.formatMessage id={`${data.site.siteMetadata.title}`} />
                 </h1>
-                <div className='flex flex-col-reverse p-2'>
-                    {isSmallWindow
-                    ? <div className='place-self-center'> {DropMenu()} </div>
-                    : <nav>
-                        <ul className="flex space-x-4">
-                        {data.site.siteMetadata.menuLinks.map(link => (
-                            <li
-                            key={link.name}
-                            className="pr-3"
-                            >
-                                <Link className="hover:text-black" to={link.link}>
-                                    <intl.formatMessage id={`${link.name}`} />
-                                </Link>
-                            </li>
-                        ))}
-                        </ul>
-                    </nav>
-                    }
-                    
+                <div className='flex flex-col p-2'>
                     <div className='flex flex-row place-self-center justify-evenly pb-2 min-w-12'>
                         <IntlContextConsumer>
                             {({ languages, language: currentLocale }) =>
@@ -81,6 +62,23 @@ const Layout = ({ pageTitle, children }) => {
                                 }
                         </IntlContextConsumer>
                     </div>
+                    {isSmallWindow
+                    ? <div className='place-self-center'><DropMenu/></div>
+                    : <nav>
+                        <ul className="flex space-x-4">
+                        {data.site.siteMetadata.menuLinks.map(link => (
+                            <li
+                            key={link.name}
+                            className="pr-3"
+                            >
+                                <Link className="hover:text-black" to={link.link}>
+                                    <intl.formatMessage id={`${link.name}`} />
+                                </Link>
+                            </li>
+                        ))}
+                        </ul>
+                    </nav>
+                    }
                 </div>
             </header>
 

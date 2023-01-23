@@ -34,7 +34,7 @@ function classNames(...classes) {
     return (
         <Menu as="div" className="relative inline-block text-left">
         <div>
-            <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-2 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
+            <Menu.Button name="Menu button" className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-2 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </Menu.Button>
         </div>
