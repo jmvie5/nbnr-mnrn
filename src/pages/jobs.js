@@ -3,15 +3,16 @@ import Layout from "../components/Layout"
 import Nrd from "../components/Nrd"
 import { useIntl } from "gatsby-plugin-intl"
 import { Seo } from "../components/Seo"
+import Video from "../components/Video"
 
 const JobsPage = () => {
     const intl = useIntl()
 
-    let intro = <div className="space-y-4"><p>NBNR is staffed primarily by musicians from the following six Naval Reserve Divisions (NRD), but also welcomes musicians from all NRDs.</p><p>A complete list of NRDs can be found <a href="https://www.canada.ca/en/navy/corporate/our-organization/structure/navres/divisions.html" className="underline text-blue-700">here</a>.
+    let intro = <div className="space-y-4 p-4"><p>NBNR is staffed primarily by musicians from the following six Naval Reserve Divisions (NRD), but also welcomes musicians from all NRDs.</p><p>A complete list of NRDs can be found <a href="https://www.canada.ca/en/navy/corporate/our-organization/structure/navres/divisions.html" className="underline text-blue-700">here</a>.
     We encourage you to contact the DRN nearest you for further information on joining the Royal Canadian Navy.</p><p>You can have more information on being a musican in the Canadian Armed Forces <a href="https://forces.ca/en/career/musician/" className="underline text-blue-700">here</a></p></div>;
 
     if (intl.locale === "fr") {
-        intro = <div className="space-y-4"><p>Le personnel de la MNRN se compose principalement de musiciens des six divisions de la Réserve navale (DRN) suivantes , mais elle accueille également des musiciens de toutes les DRN.</p><p>Une liste complète des DRN est disponible <a href="https://www.canada.ca/fr/marine/organisation/notre-organisation/structure/resnav/divisions.html" className="underline text-blue-700">ici</a>.
+        intro = <div className="space-y-4 p-4"><p>Le personnel de la MNRN se compose principalement de musiciens des six divisions de la Réserve navale (DRN) suivantes , mais elle accueille également des musiciens de toutes les DRN.</p><p>Une liste complète des DRN est disponible <a href="https://www.canada.ca/fr/marine/organisation/notre-organisation/structure/resnav/divisions.html" className="underline text-blue-700">ici</a>.
         Nous vous encourageons à communiquer avec la DRN la plus près de chez vous pour obtenir de plus amples renseignements sur les procédures d'enrôlement dans la Marine royale canadienne.</p><p>Vous pouvez obtenir plus d'informations sur le métier de musicien dans les Forces armées canadiennes <a href="https://forces.ca/fr/carriere/musicien/" className="underline text-blue-700">ici</a></p></div>;
     }
     
@@ -20,7 +21,14 @@ const JobsPage = () => {
 
         <Layout pageTitle="Jobs" description="Job opportunities with NBNR and how to apply.">
             <div className="flex flex-col space-y-8">
-                {intro}
+                <div className="flex flex-col-reverse divide-sky-800/25 divide-y-reverse divide-y-4 sm:flex-row sm:divide-x-4 sm:divide-y-0">
+                    <div className="">
+                        {intro}
+                    </div>
+                    
+                    <Video linkId="r-ygKKxYcWU" title={{"en" : "Meet the Bands!", "fr" : "Rencontrez les Musiques!"}} description={{"en" : "Check out what life is like as a musician in Canada’s Naval Reserve! Meet the bands and find out if a life of adventure, travel, and playing music is for you. ", "fr" : "Découvrez ce qu’est la vie d’un musicien dans la Réserve navale du Canada ! Rencontrez les Musiques et découvrez si une vie d’aventure, de voyages et de musique est faite pour vous."}} />
+                </div>
+                
                 
                 <div className="space-y-8">
                     <div className="space-y-4">

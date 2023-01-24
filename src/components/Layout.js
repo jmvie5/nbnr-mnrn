@@ -1,8 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
-import { useIntl, Link, IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
-import useWindowSize from '../../modules/windowSize.js'
+import { useIntl, IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
 import DropMenu from './DropMenu.js'
 
 
@@ -27,15 +26,6 @@ const Layout = ({ pageTitle, children }) => {
             }
         }
     `)
-
-    let isSmallWindow
-    let windowWidth = useWindowSize().width
-
-    if (windowWidth < 1000) {
-        isSmallWindow = true;
-    } else if (windowWidth > 1000) {
-        isSmallWindow = false;
-    };
 
     return (
         <div className="min-h-screen flex flex-col justify-between">
@@ -62,23 +52,7 @@ const Layout = ({ pageTitle, children }) => {
                                 }
                         </IntlContextConsumer>
                     </div>
-                    {isSmallWindow
-                    ? <div className='place-self-center'><DropMenu/></div>
-                    : <nav>
-                        <ul className="flex space-x-4">
-                        {data.site.siteMetadata.menuLinks.map(link => (
-                            <li
-                            key={link.name}
-                            className="pr-3"
-                            >
-                                <Link className="hover:text-black" to={link.link}>
-                                    <intl.formatMessage id={`${link.name}`} />
-                                </Link>
-                            </li>
-                        ))}
-                        </ul>
-                    </nav>
-                    }
+                    <div className='place-self-center'><DropMenu/></div>
                 </div>
             </header>
 

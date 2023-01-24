@@ -22,6 +22,10 @@ module.exports = {
         link: "/videos"
       },
       {
+        name: "Ceremonial Music",
+        link: "/ceremonial_music"
+      },
+      {
         name: "Concerts",
         link: "/concerts"
       },
@@ -81,7 +85,7 @@ module.exports = {
         short_name: `NBNR`,
         start_url: `/`,
         background_color: `#f7f0eb`,
-        theme_color: `#075985bf`,
+        theme_color: `#276688`,
         display: `standalone`,
         icon: `src/images/icon.png`
       }
