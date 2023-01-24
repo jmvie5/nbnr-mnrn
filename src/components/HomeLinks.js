@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { useIntl, Link } from 'gatsby-plugin-intl'
 
-const HomeLinks = ({ title, children, link }) => {
-    //title and description = {en, fr}
+const HomeLinks = ({ title, link, children }) => {
+    //title = {en, fr}
     //link = Gatsby page link
     const intl = useIntl()
 

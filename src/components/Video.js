@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useIntl } from 'gatsby-plugin-intl'
-import '@justinribeiro/lite-youtube';
+//import '@justinribeiro/lite-youtube' now in gatsby-browser.js and gatsby-ssr.js;
 
 const Video = ({ linkId, title, description }) => {
     //linkId = string

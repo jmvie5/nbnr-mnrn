@@ -23,7 +23,7 @@ module.exports = {
       },
       {
         name: "Ceremonial Music",
-        link: "/ceremonial_music"
+        link: "/ceremonial-music"
       },
       {
         name: "Concerts",

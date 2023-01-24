@@ -8,10 +8,10 @@ import { Seo } from "../components/Seo"
 const VideoPage = () => {
     const intl = useIntl()
 
-    let ending = <div className="space-y-4"><p>Looking for Ceremonial Music? Go on the <Link to="/ceremonial_music" className="underline text-blue-700">Ceremonial Music page</Link> or find more videos made by NBNR on our <a href="https://www.youtube.com/channel/UC9X4dG-fBwQ0fzSIoD063bw/videos" className="underline text-blue-700">Youtube</a> page.</p></div>;
+    let ending = <div className="space-y-4"><p>Looking for Ceremonial Music? Go on the <Link to="/ceremonial-music" className="underline text-blue-700">Ceremonial Music page</Link> or find more videos made by NBNR on our <a href="https://www.youtube.com/channel/UC9X4dG-fBwQ0fzSIoD063bw/videos" className="underline text-blue-700">Youtube</a> page.</p></div>;
 
     if (intl.locale === "fr") {
-        ending = <div className="space-y-4"><p>Vous cherchez la musique de cérémonie ? Allez sur l'onglet <Link to="/ceremonial_music" className="underline text-blue-700">musique de cérémonie</Link> ou allez sur notre page <a href="https://www.youtube.com/channel/UC9X4dG-fBwQ0fzSIoD063bw/videos" className="underline text-blue-700">Youtube</a> pour trouverez d'autres vidéos réalisées par la MNRN.</p></div>;
+        ending = <div className="space-y-4"><p>Vous cherchez la musique de cérémonie ? Allez sur l'onglet <Link to="/ceremonial-music" className="underline text-blue-700">musique de cérémonie</Link> ou allez sur notre page <a href="https://www.youtube.com/channel/UC9X4dG-fBwQ0fzSIoD063bw/videos" className="underline text-blue-700">Youtube</a> pour trouverez d'autres vidéos réalisées par la MNRN.</p></div>;
     }
     return (
 

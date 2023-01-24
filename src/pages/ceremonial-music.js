@@ -13,6 +13,7 @@ const CeremonialPage = () => {
     if (intl.locale === "fr") {
         ending = <div className="space-y-4"><p>Vous trouverez d'autres vidéos réalisées par la MNRN dans l'onglet <Link to="/videos" className="underline text-blue-700">vidéos</Link> ou sur notre page <a href="https://www.youtube.com/channel/UC9X4dG-fBwQ0fzSIoD063bw/videos" className="underline text-blue-700">Youtube</a>.</p></div>;
     }
+    
     return (
 
     <div>

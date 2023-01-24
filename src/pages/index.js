@@ -15,7 +15,7 @@ const IndexPage = () => {
             <HomeLinks title={{"en" : "About us", "fr" : "À propos de nous"}} link="/about"><InformationCircleIcon className="h-12 w-12" aria-hidden="true"/></HomeLinks>
             <HomeLinks title={{"en" : "Photo Gallery", "fr" : "Galerie photos"}} link="/gallery"><PhotoIcon className="h-12 w-12" aria-hidden="true"/></HomeLinks>
             <HomeLinks title={{"en" : "Videos made by NBNR", "fr" : "Vidéos réalisées par la MNRN"}} link="/videos"><FilmIcon className="h-12 w-12" aria-hidden="true"/></HomeLinks>
-            <HomeLinks title={{"en" : "Ceremonial Music recorded by NBNR", "fr" : "Musique de cérémonie enregistrée par la MNRN"}} link="/ceremonial_music"><MusicalNoteIcon className="h-12 w-12" aria-hidden="true"/></HomeLinks>
+            <HomeLinks title={{"en" : "Ceremonial Music recorded by NBNR", "fr" : "Musique de cérémonie enregistrée par la MNRN"}} link="/ceremonial-music"><MusicalNoteIcon className="h-12 w-12" aria-hidden="true"/></HomeLinks>
             <HomeLinks title={{"en" : "Upcoming concerts", "fr" : "Concerts à venir"}} link="/concerts"><SparklesIcon className="h-12 w-12" aria-hidden="true"/></HomeLinks>
             <HomeLinks title={{"en" : "Looking for a job?", "fr" : "À la recherche d'un emploi?"}} link="/jobs"><UserGroupIcon className="h-12 w-12" aria-hidden="true"/></HomeLinks>
             
