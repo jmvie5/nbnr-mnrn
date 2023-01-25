@@ -23,7 +23,7 @@ const CeremonialPage = () => {
                 
                 <Video linkId="2kOZ9igydOE" title={{"en" : "God Save the King", "fr" : "Dieu protège le Roi"}} description={{"en" : 'The National Band of the Naval Reserve presents "God Save the King!"', "fr" : " La Musique nationale de la Réserve navale présente « Dieu protège le Roi » !"}} />
 
-                <Video linkId="sFun724J3xE" title={{"en" : "Eternal Father (Naval Hymn)", "fr" : "Eternal Father (Hymne naval)"}} description={{"en" : 'The National Band of the Naval Reserve presents the Naval Hymn, "Eternal Father."', "fr" : " La Musique nationale de la Réserve navale présente l'hymne naval, « Eternal Father »."}} />
+                <Video linkId="sFun724J3xE" title={{"en" : "Eternal Father (Naval Hymn)", "fr" : "Eternal Father (Hymne naval)"}} description={{"en" : 'The National Band of the Naval Reserve presents the Naval Hymn, "Eternal Father".', "fr" : " La Musique nationale de la Réserve navale présente l'hymne naval, « Eternal Father »."}} />
 
                 <Video linkId="KOhCKUo3H4I" title={{"en" : 'The Standard of St. George', "fr" : 'The Standard of St. George'}} description={{"en" : 'The National Band of the Naval Reserve presents "The Standard of St. George"!', "fr" : "La Musique nationale de la Réserve navale présente « The Standard of St. George » !"}} />
 
