@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
-import { useIntl, IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
+import { useIntl, IntlContextConsumer, changeLocale, Link } from "gatsby-plugin-intl"
 import DropMenu from './DropMenu.js'
 
 
@@ -31,8 +31,10 @@ const Layout = ({ pageTitle, children }) => {
         <div className="min-h-screen flex flex-col justify-between">
             <header className='flex justify-around items-center bg-sky-800/75 p-2 text-white z-50'>
                 <title>{pageTitle} | {data.site.siteMetadata.title}</title>
-
-                <StaticImage src="../../src/images/logoRound.png" alt="NBNR Logo" width={90} height={90} className='aspect-square min-w-max' />
+                <Link to="/" >
+                    <StaticImage src="../../src/images/logoRound.png" alt="NBNR Logo" width={90} height={90} className='aspect-square min-w-max' />
+                </Link>
+                
                 <h1 className="pl-4 pr-4 font-sans text-3xl text-center font-bold">
                     <intl.formatMessage id={`${data.site.siteMetadata.title}`} />
                 </h1>
