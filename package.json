@@ -22,7 +22,7 @@
     "@mdx-js/mdx": "^2.2.1",
     "@mdx-js/react": "^2.2.1",
     "caniuse-lite": "^1.0.30001445",
-    "gatsby": "^5.4.2",
+    "gatsby": "^5.8.1",
     "gatsby-plugin-image": "^3.4.0",
     "gatsby-plugin-intl": "^0.3.3",
     "gatsby-plugin-manifest": "^5.4.0",
