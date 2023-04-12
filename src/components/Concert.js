@@ -1,29 +1,39 @@
 import * as React from 'react'
 import { useIntl } from "gatsby-plugin-intl"
 
-const Concert = ({ dateParams, title, adress, time, ensemble, ticketsLink }) => {
-    //dateParams = [year, month, day]
+const Concert = ({ data }) => {
+    //title, dateParams, address, time, ensemble, ticketsLink
     //title = {en, fr}
+    //dateParams = [int year, int month, int day]
+    //time = str, or int 0 if none
     //All other params are strings
 
     const intl = useIntl()
 
-    const mapLink = 'https://www.google.ca/maps/search/' + adress;
-
-    const date = new Date(dateParams[0], dateParams[1], dateParams[2])
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const mapLink = 'https://www.google.ca/maps/search/' + data.address;
 
     let lang = "en-EN";
-    
-
     if (intl.locale === "fr") {
         lang = "fr-FR";
     }
 
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+
+    let concertTitle
+
+    const concertDate = new Date(data.dateParams[0], data.dateParams[1], data.dateParams[2])
+
+    if (data.time === 0){
+        concertTitle = data.title[intl.locale]
+    }
+    else {
+        concertTitle = `${data.title[intl.locale]} @${data.time}`
+    }
+
+    //ticket link
     let tickets;
     let isFree;
-
-    if (ticketsLink === "free") {
+    if (data.ticketsLink === "free") {
         tickets = <intl.formatMessage id="FREE"/>;
         isFree = true;
     } else {
@@ -34,15 +44,15 @@ const Concert = ({ dateParams, title, adress, time, ensemble, ticketsLink }) => 
     return (
         <div className="flex justify-between p-8">
             <div>
-                <h1 className="font-bold">{date.toLocaleDateString(lang, options)}</h1>
-                <h2>{title[intl.locale]} @{time}</h2>
-                <a href={mapLink} className="text-base text-blue-800 underline">{adress}</a>
-                <p className="text-sm"><intl.formatMessage id="Ensemble" /> : <intl.formatMessage id={ensemble} /></p>
+                <h1 className="font-bold">{concertDate.toLocaleDateString(lang, options)}</h1>
+                <h2>{concertTitle}</h2>
+                <a href={mapLink} className="text-base text-blue-800 underline">{data.address}</a>
+                <p className="text-sm"><intl.formatMessage id="Ensemble" /> : <intl.formatMessage id={data.ensemble} /></p>
             </div>
             <div className="self-center">
                 {isFree
                 ? <p className="border-2 border-sky-800 p-2 text-sky-800 hover:bg-sky-800 hover:text-sky-100">{tickets}</p>
-                : <a href={ticketsLink} className="border-2 border-sky-800 p-2 text-sky-800 hover:bg-sky-800 hover:text-sky-100">{tickets}</a>
+                : <a href={data.ticketsLink} className="border-2 border-sky-800 p-2 text-sky-800 hover:bg-sky-800 hover:text-sky-100">{tickets}</a>
                 }
             </div>
             

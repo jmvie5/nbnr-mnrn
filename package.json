@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@formatjs/icu-messageformat-parser": "^2.1.14",
     "@headlessui/react": "^1.7.7",
     "@heroicons/react": "^2.0.13",
     "@justinribeiro/lite-youtube": "^1.4.0",
