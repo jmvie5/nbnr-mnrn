@@ -3,8 +3,7 @@
 import * as React from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { Bars3Icon } from '@heroicons/react/24/solid'
-
-import { useStaticQuery, graphql } from 'gatsby'
+import { useSiteMetadata } from '../hooks/use-site-metadata'
 import { useIntl, Link } from "gatsby-plugin-intl"
 
 function classNames(...classes) {
@@ -13,21 +12,9 @@ function classNames(...classes) {
 
 
 
-    export default function DropMenu() {
+export default function DropMenu() {
 
-        const data = useStaticQuery(graphql`
-        query {
-            site {
-            siteMetadata {
-                title
-                menuLinks {
-                name
-                link
-                }
-            }
-            }
-        }
-    `)
+    const siteMetadata = useSiteMetadata()
 
     const intl = useIntl()
 
@@ -51,7 +38,7 @@ function classNames(...classes) {
                 
                 <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="py-1">
-                        {data.site.siteMetadata.menuLinks.map(link => (
+                        {siteMetadata.menuLinks.map(link => (
                                     <Menu.Item>
                                         {({ active }) => (
                                             <Link to={link.link} className={classNames(
@@ -68,4 +55,4 @@ function classNames(...classes) {
             </Transition>
         </Menu>
     )
-    }
+}

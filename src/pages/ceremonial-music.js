@@ -18,7 +18,7 @@ const CeremonialPage = () => {
 
     <div>
         <Layout pageTitle="Ceremonial Music" description="Recordings of ceremonial music made by NBNR.">
-            <div className="flex grid md:grid-cols-2 grid-col-1 gap-4 place-content-center mb-8">
+            <div className="grid md:grid-cols-2 grid-col-1 gap-4 place-content-center mb-8">
                 <Video linkId="IXJbh-C0xps" title={{"en" : "O Canada", "fr" : "Ô Canada"}} description={{"en" : 'The National Band of the Naval Reserve presents the Canadian national anthem, "O Canada"!', "fr" : "La Musique nationale de la Réserve navale présente l'hymne national canadien, « Ô Canada » !"}} />
                 
                 <Video linkId="2kOZ9igydOE" title={{"en" : "God Save the King", "fr" : "Dieu protège le Roi"}} description={{"en" : 'The National Band of the Naval Reserve presents "God Save the King!"', "fr" : " La Musique nationale de la Réserve navale présente « Dieu protège le Roi » !"}} />
