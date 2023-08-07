@@ -1,8 +1,8 @@
 import * as React from "react"
-import Resume from 'react'
 import Layout from "../components/Layout"
 import Concert from "../components/Concert"
 import { Seo } from "../components/Seo"
+import { useIntl } from "gatsby-plugin-intl"
 
 /*Params for Concert {
         title = {en:"", fr:""},
@@ -25,6 +25,8 @@ const concertList = [
 ]
 
 const ConcertsPage = () => {
+    const intl = useIntl()
+
     return (
 
         <div>
@@ -37,13 +39,10 @@ const ConcertsPage = () => {
                         if (concertDate >= dateNow) {
                             return <Concert data={concert}/>
                         }
-                        return <Concert data={concert}/>
+                        return null
                     })}
                 </div>
-                <div className="flex flex-col grap-2">
-                    <a href="https://nbnr.ca/Program_English.pdf" className=" text-sky-600 underline">English Program August 4 Concert</a>
-                    <a href="https://nbnr.ca/Programme_Francais.pdf" className=" text-sky-600 underline">Programme de concert 4 aout</a>
-                </div>
+                <intl.formatMessage id="No Concert" />
                 
             </Layout>
         </div>

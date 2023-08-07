@@ -21,7 +21,7 @@ const JobsPage = () => {
 
         <Layout pageTitle="Jobs" description="Job opportunities with NBNR and how to apply.">
             <div className="flex flex-col space-y-8">
-                <div className="flex flex-col-reverse divide-sky-800/25 divide-y-reverse divide-y-4 sm:flex-row sm:divide-x-4 sm:divide-y-0">
+                <div className="flex flex-col-reverse divide-sky-800/75 divide-y-reverse divide-y-2 md:flex-row md:divide-x-2 md:divide-y-0">
                     <div className="">
                         {intro}
                     </div>

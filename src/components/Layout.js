@@ -34,7 +34,7 @@ const Layout = ({ pageTitle, children }) => {
                                     <button
                                     key={language}
                                     onClick={() => changeLocale(language)}
-                                    className={`p-2 ${currentLocale === language ? "underline text-black rounded-xl" : "text-white"}`}
+                                    className={`p-2 ${currentLocale === language ? "underline text-black rounded-xl" : "text-white hover:underline"}`}
                                     >
                                     {languageName[language]}
                                     </button>
@@ -64,19 +64,19 @@ const Layout = ({ pageTitle, children }) => {
                             <a href='https://www.instagram.com/nbnr.mnrn/' className='flex space-x-1.5'>
                                 <StaticImage src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png'
                                     alt='Instagram Logo' width={30} height={30} className='aspect-square'/>
-                                <p className='underline'>@nbnr.mnrn</p>
+                                <p className='hover:underline'>@nbnr.mnrn</p>
                             </a>
 
                             <a href='https://www.facebook.com/nbnr.mnrn/' className='flex space-x-1.5'>
                                 <StaticImage src='https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/800px-Facebook_f_logo_%282021%29.svg.png'
                                     alt='Facebook Logo' width={30} height={30} className='aspect-square'/>
-                                <p className='underline'>@nbnr.mnrn</p>
+                                <p className='hover:underline'>@nbnr.mnrn</p>
                             </a>
 
                             <a href='https://www.youtube.com/channel/UC9X4dG-fBwQ0fzSIoD063bw' className='flex space-x-1.5'>
                                 <StaticImage src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/langfr-1920px-YouTube_Logo_2017.svg.png"
                                     alt='YouTube Logo' width={45} height={30} className='aspect-{1.5}'/>
-                                <p className='underline'>@NBNR_MNRN</p>
+                                <p className='hover:underline'>@NBNR_MNRN</p>
                             </a>
                         </div>
                         <div  className='mt-4'>

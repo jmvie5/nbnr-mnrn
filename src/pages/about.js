@@ -12,7 +12,7 @@ const AboutPage = () => {
         <Layout pageTitle="About" description="The National Band of the Naval Reserve (NBNR), formed in 1976, is comprised of Reservist musicians chosen from the six Naval Reserve Division bands across Canada.">
             <div className="flex gap-16 mb-8">
                 <div className="text-left space-y-4">
-                    <StaticImage alt="NBNR Logo" src="../images/logo.jpg" className="float-right ml-8 max-w-[40%]"/>
+                    <StaticImage alt="NBNR Logo" src="../images/logo.jpg" className="float-right ml-8 max-w-[40%] lg:max-w-md"/>
                     <intl.formatMessage id="About p1"/>
                     <ul className="list-disc pl-8">
                         <li><intl.formatMessage id="TECUMSEH"/></li>
