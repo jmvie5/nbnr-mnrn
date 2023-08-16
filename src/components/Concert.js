@@ -42,12 +42,13 @@ const Concert = ({ data }) => {
     }
 
     return (
-        <div className="flex justify-between p-8">
+        <div className="flex flex-col sm:flex-row gap-4 justify-between p-8">
             <div>
                 <h1 className="font-bold">{concertDate.toLocaleDateString(lang, options)}</h1>
                 <h2>{concertTitle}</h2>
                 <a href={mapLink} className="text-base text-blue-800 underline">{data.address}</a>
-                <p className="text-sm"><intl.formatMessage id="Ensemble" /> : <intl.formatMessage id={data.ensemble} /></p>
+                <p className="text-base"><intl.formatMessage id="Ensemble" /> : <intl.formatMessage id={data.ensemble} /></p>
+                {data.program ? <a href={data.program[intl.locale]} target="_blank" rel="noreferrer" aria-label='program' className='text-base text-blue-800 underline' ><intl.formatMessage id="Program" /></a>: <></>}
             </div>
             <div className="self-center">
                 {isFree

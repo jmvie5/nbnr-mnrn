@@ -15,14 +15,16 @@ import { useIntl } from "gatsby-plugin-intl"
 const concertList = [
     {
         title: {en:"Celebrating 100 years of the Naval Reserve in Canada", fr: "Célébration des 100 ans de la Réserve navale au Canada"},
-        dateParams: [2023, 7, 4],
-        address: "Holy Heart Theatre St. John's, NL",
-        time: "19:00",
+        dateParams: [2023, 7, 20],
+        address: "New Brunswick Naval Memorial, 130 Fort Latour Drive, Saint John.",
+        time: "12:00",
         ensemble: "Concert Band",
-        ticketsLink: "free"
+        ticketsLink: "free",
+        program: {en: "https://nbnr.ca/Program_English.pdf", fr: "https://nbnr.ca/Programme_Francais.pdf"}
     },
-
+    
 ]
+let isConcert = false
 
 const ConcertsPage = () => {
     const intl = useIntl()
@@ -31,19 +33,18 @@ const ConcertsPage = () => {
 
         <div>
             <Layout pageTitle="Concerts" description="NBRN upcoming concerts.">
-                <div className="justify-center flex flex-col space-y-4 divide-y-2 divide-gray-800">
+                <div className="flex flex-col space-y-4 divide-y-2 divide-gray-800">
                     {concertList.map(concert => {
-                        var concertDate = new Date(concert.dateParams[0], concert.dateParams[1], concert.dateParams[2])
+                        var concertDate = new Date(concert.dateParams[0], concert.dateParams[1], concert.dateParams[2], 23, 59)
                         var dateNow = new Date()
-                        
                         if (concertDate >= dateNow) {
-                            return <Concert data={concert}/>
+                            isConcert = true
+                            return <Concert data={concert}/>  
                         }
                         return null
                     })}
                 </div>
-                <intl.formatMessage id="No Concert" />
-                
+                {isConcert? <></>: <intl.formatMessage id="No Concert"/>}
             </Layout>
         </div>
         

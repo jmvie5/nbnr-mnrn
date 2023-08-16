@@ -49,6 +49,7 @@
     "Ensemble" : "Ensemble",
     "TICKETS" : "BILLETS",
     "FREE" : "GRATUIT",
+    "Program": "Programme du concert",
 
     "No Concert" : "Les concerts à venir vont s'ajouter ici.",
     "Concert time zones" : "Les heures de concert sont indiquées dans le fuseau horaire local.",

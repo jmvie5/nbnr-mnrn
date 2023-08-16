@@ -49,6 +49,7 @@
     "Ensemble" : "Ensemble",
     "TICKETS" : "TICKETS",
     "FREE" : "FREE",
+    "Program": "Concert program",
 
     "No Concert" : "Upcoming concerts will be added here.",
     "Concert time zones" : "Concert times are shown in the local timezone.",
