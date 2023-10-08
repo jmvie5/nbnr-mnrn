@@ -1,3 +1,5 @@
+const messagesEN = require("./src/langs/en.json");
+const messagesFR = require("./src/langs/fr.json");
 module.exports = {
   siteMetadata: {
     title: "National Band of the Naval Reserve",
@@ -71,15 +73,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-intl`,
-      options: {
-        path: `${__dirname}/src/intl`,
-        languages: [`en`, `fr`],
-        defaultLanguage: `en`,
-        redirect: true,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `National Band of the Naval Reserve`,
@@ -89,6 +82,33 @@ module.exports = {
         theme_color: `#276688`,
         display: `standalone`,
         icon: `src/images/icon.png`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-i18n-l10n`,
+      options: {
+        defaultLocale: `en-CA`,
+        siteUrl: `https://nbnr.ca`,
+        locales: [
+          {
+            locale: `en-CA`,
+            prefix: `en`,
+            slugs: {},
+            messages: messagesEN,
+          },
+          {
+            locale: `fr-CA`,
+            prefix: `fr`,
+            slugs: {
+              "/about": "/a-propos",
+              "/ceremonial-music": "/musique-de-ceremonie",
+              "/gallery": "/galerie",
+              "/jobs": "/emplois",
+            },
+            messages: messagesFR,
+          },
+        ],
+        pathBlacklist: ["/pages"],
       },
     },
   ],
