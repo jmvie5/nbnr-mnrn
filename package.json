@@ -27,6 +27,7 @@
     "gatsby-plugin-intl": "^0.3.3",
     "gatsby-plugin-manifest": "^5.4.0",
     "gatsby-plugin-mdx": "^5.4.0",
+    "gatsby-plugin-netlify": "^5.1.1",
     "gatsby-plugin-react-helmet": "^6.4.0",
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sharp": "^5.4.0",
