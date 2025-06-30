@@ -58,7 +58,7 @@ const Concert = ({ data }) => {
           <intl.formatMessage id="Ensemble" /> :{" "}
           <intl.formatMessage id={data.ensemble} />
         </p>
-        {data.program ? (
+        {data.program && (
           <a
             href={data.program[intl.locale]}
             target="_blank"
@@ -68,8 +68,6 @@ const Concert = ({ data }) => {
           >
             <intl.formatMessage id="Program" />
           </a>
-        ) : (
-          <></>
         )}
       </div>
       <div className="self-center">
