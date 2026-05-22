@@ -38,7 +38,15 @@ module.exports = {
     ],
   },
   plugins: [
-    "gatsby-plugin-netlify",
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          "/*": ["Referrer-Policy: strict-origin-when-cross-origin"], // Fix youtube embed referrer policy issues with netlify's default headers, see https://github.com/justinribeiro/lite-youtube/issues/140#issuecomment-3456868187
+        },
+        mergeSecurityHeaders: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -104,10 +112,6 @@ module.exports = {
               // "/ceremonial-music": "/musique-de-ceremonie",
               // "/gallery": "/galerie",
               // "/jobs": "/emplois",
-              "/about": "/about",
-              "/ceremonial-music": "/ceremonial-music",
-              "/gallery": "/gallery",
-              "/jobs": "/jobs",
             },
             messages: messagesFR,
           },
