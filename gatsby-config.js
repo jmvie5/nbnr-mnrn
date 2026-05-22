@@ -107,7 +107,12 @@ module.exports = {
           {
             locale: `fr-CA`,
             prefix: `fr`,
-            slugs: {},
+            slugs: {
+              // "/about": "/a-propos",
+              // "/ceremonial-music": "/musique-de-ceremonie",
+              // "/gallery": "/galerie",
+              // "/jobs": "/emplois",
+            },
             messages: messagesFR,
           },
         ],
