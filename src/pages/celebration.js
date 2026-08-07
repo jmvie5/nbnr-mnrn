@@ -40,6 +40,11 @@ const FiftiethAnniversaryPage = () => {
           <p>
             <intl.formatMessage id="concert-50-5" />
           </p>
+          <p class="font-bold underline text-sky-600 hover:text-sky-400">
+          <a href="https://www.eventbrite.com/e/billets-celebrons-ensemble-50-ans-de-musique-lets-celebrate-50-years-of-music-1996049792662?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer">
+            <intl.formatMessage id="concert-50-ticket-link" />
+          </a>
+          </p>
         </div>
         
       </div>
