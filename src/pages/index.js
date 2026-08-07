@@ -9,6 +9,7 @@ import {
   FilmIcon,
   SparklesIcon,
   PhotoIcon,
+  CakeIcon,
 } from "@heroicons/react/24/outline";
 
 import image2 from "../../gallery/Ship-2.webp";
@@ -68,6 +69,15 @@ const IndexPage = () => {
           link="/jobs"
         >
           <UserGroupIcon className="h-12 w-12" aria-hidden="true" />
+        </HomeLinks>
+        <HomeLinks
+          title={{
+            "en-CA": "50th Anniversary",
+            "fr-CA": "50e anniversaire",
+          }}
+          link="/celebration"
+        >
+          <CakeIcon className="h-12 w-12" aria-hidden="true" />
         </HomeLinks>
       </div>
     </Layout>

@@ -11,6 +11,7 @@
   "Ceremonial Music": "Ceremonial Music",
   "Concerts": "Concerts",
   "Jobs": "Jobs",
+  "50th Anniversary": "50th Anniversary",
 
   "Contact information": "Contact information",
   "Find NBNR online:": "Find NBNR online:",
@@ -63,5 +64,16 @@
   "HMCS": "HMCS",
   "Telephone": "Telephone",
   "Recruiting": "Recruiting",
-  "Email": "Email"
+  "Email": "Email",
+
+  "concert-50-title": "Let’s celebrate 50 years of music together",
+  "concert-50-1": "For fifty years, the ",
+  "concert-50-1.2": " of the Royal Canadian Navy has been promoting military music while bringing Canadians together through performances that inspire and unite.",
+  "concert-50-2": "To mark this milestone anniversary, we are delighted to invite you to a special concert celebrating pride and a passion for music.",
+  "concert-50-3": "We would be honored to have you join us in celebrating this event.",
+   "concert-50-date-1": "This concert will take place on Saturday, August 15, at 2:00 p.m. at the ",
+  "concert-50-location": "Espace symphonique de Lévis",
+  "concert-50-date-2": ", located at 3995 Rue de la Fabrique in Lévis.",
+  "concert-50-4": "This gathering will be an opportunity to relive cherished memories, celebrate how far we’ve come, and share a memorable musical moment together.",
+  "concert-50-5": "We hope to have the pleasure of welcoming you to this 50th anniversary celebration of the Naval Band of the Naval Reserve."
 }
