@@ -15,18 +15,14 @@ import { useIntl } from "react-intl";
 const concertList = [
   {
     title: {
-      en: "Celebrating 100 years of the Naval Reserve in Canada",
-      fr: "Célébration des 100 ans de la Réserve navale au Canada",
+      en: "Let’s celebrate 50 years of music",
+      fr: "Célébrons ensemble 50 ans de musique",
     },
-    dateParams: [2023, 7, 20],
-    address: "New Brunswick Naval Memorial, 130 Fort Latour Drive, Saint John.",
-    time: "12:00",
+    dateParams: [2026, 7, 15],
+    address: "Espace symphonique de Lévis - Lévis, QC",
+    time: "14:00",
     ensemble: "Concert Band",
-    ticketsLink: "free",
-    program: {
-      en: "https://nbnr.ca/Program_English.pdf",
-      fr: "https://nbnr.ca/Programme_Francais.pdf",
-    },
+    ticketsLink: "https://www.eventbrite.com/e/billets-celebrons-ensemble-50-ans-de-musique-lets-celebrate-50-years-of-music-1996049792662?aff=oddtdtcreator",
   },
 ];
 let isConcert = false;

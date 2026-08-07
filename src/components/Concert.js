@@ -16,6 +16,7 @@ const Concert = ({ data }) => {
   if (intl.locale === "fr-CA") {
     lang = "fr-FR";
   }
+  const locale = new Intl.Locale(lang);
 
   const options = { year: "numeric", month: "long", day: "numeric" };
 
@@ -28,10 +29,12 @@ const Concert = ({ data }) => {
   );
 
   if (data.time === 0) {
-    concertTitle = data.title[intl.locale];
+    concertTitle = data.title[locale.language];
   } else {
-    concertTitle = `${data.title[intl.locale]} @${data.time}`;
+    concertTitle = `${data.title[locale.language]} @${data.time}`;
   }
+
+  console.log(data.title, intl.locale, concertTitle);
 
   //ticket link
   let tickets;
@@ -79,6 +82,8 @@ const Concert = ({ data }) => {
           <a
             href={data.ticketsLink}
             className="border-2 border-sky-800 p-2 text-sky-800 hover:bg-sky-800 hover:text-sky-100"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             {tickets}
           </a>
