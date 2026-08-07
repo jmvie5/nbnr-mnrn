@@ -71,7 +71,7 @@ const Layout = ({ pageTitle, children }) => {
                 className="flex space-x-1.5"
               >
                 <StaticImage
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png"
+                  src="../images/250px-Instagram_logo_2022.svg.webp"
                   alt="Instagram Logo"
                   width={30}
                   height={30}
@@ -85,7 +85,7 @@ const Layout = ({ pageTitle, children }) => {
                 className="flex space-x-1.5"
               >
                 <StaticImage
-                  src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/800px-Facebook_f_logo_%282021%29.svg.png"
+                  src="../images/250px-2023_Facebook_icon.svg.webp"
                   alt="Facebook Logo"
                   width={30}
                   height={30}
